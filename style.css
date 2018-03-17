@@ -1,0 +1,793 @@
+@import url("default.css");
+
+@keyframes dropdownLI {
+	from {
+		letter-spacing: -1rem;
+	}
+
+	to {
+		letter-spacing: normal;
+	}
+}
+
+
+@keyframes disappear {
+	0% {
+		opacity: 1;
+		top: 1px;
+		font-size: 1.5rem;
+		color: rgb(100,150,224);
+	}
+
+	30% {
+		right: 60%;
+		opacity: 1;
+	}
+
+	85% {
+		right: 30%;
+		opacity: 1;
+		font-size: 1rem;
+	}
+
+	100% {
+		right: 0%;
+		opacity: 0;
+	}
+}
+/* Style for groups of elements
+--------------------------------------------------------------------------------*/
+
+*, *::before, *::after {
+	transition: all .3s ease-out;
+}
+
+.backImage {
+	position: relative;
+}
+
+.backImage::before {
+	content: "";
+	background: rgba(0,0,0,.6);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.overlay {
+	position: relative;
+}
+
+.hoverLinkContainer {
+	position: relative;
+}
+
+.hoverLinkContainer::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.4);
+	opacity: 0;
+}
+
+.hoverLink {
+	position: absolute;
+	width: 2.8rem;
+	height: 2.8rem;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	font-size: 2.8rem;
+	color: white;
+	opacity: 0;
+}
+
+.hoverLinkContainer:hover::before, .hoverLinkContainer:hover .hoverLink {
+	opacity: 1;
+}
+
+.container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	max-width: 65%;
+	margin: 0 auto;
+	padding: 5.26% 0; 
+}
+
+.floatLeft {
+	float: left;
+	text-align: left;
+}
+
+.floatRight {
+	float: right;
+	text-align: right;
+}
+
+.horizontalList > li {
+	display: inline-block;
+}
+
+.whiteText {
+	color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-transform: capitalize;
+}
+
+
+/* Header 
+--------------------------------------------------------------------------------*/
+
+#row-6 {
+	background: url("../img/back/01.png");
+}
+
+#navTop .container{
+	padding-top: 1.31%;
+	padding-bottom: 1.31%;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+}
+
+#contacts li + li, #linksBar li + li {
+	margin: 0 0 0 15px;
+}
+
+#contacts .fas, #contacts .far {
+	margin: 0 7px 0;
+}
+
+#navBottom {
+	background: rgba(0,0,0,.6);
+}
+
+#navBottom .container {
+	padding: 0;
+}
+
+#logo {
+	padding: 25px 0 0;
+}
+
+#logo a {
+	font: 2.2rem Georgia, "Times New Roman", Times, serif;
+}
+
+#navBar > li {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	margin: 0 15px 0 0;
+}
+
+#navBar a {
+	color: rgb(255,255,255);
+}
+
+#navBar > li > a {
+	padding: 30px 0;
+	display: block;
+	text-align: left;
+	transition: .3s all;
+}
+
+#navBar > li:hover > a, .dropdown:hover > .fas {
+	color: rgb(4,222,204);
+}
+
+#navBar .dropdown .fas {
+	position: absolute;
+	top: 30px;
+	left: 0px;
+}
+
+#navBar .dropdown a {
+	padding-left: 15px;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown ul {
+	position: absolute;
+	background: rgba(0,0,0,.7);
+	text-align: left;
+	visibility: hidden;
+	width: 180px;
+	opacity: 0;
+}
+
+.dropdown:hover ul {
+	visibility: visible;
+	opacity: 1;
+}
+
+.dropdown:hover ul > li > a {
+	animation: dropdownLI .15s ease-out both ;
+	position: relative;
+	z-index: 1;
+}
+
+.dropdown ul a {
+	padding: 10px 15px;
+	border: 1px solid rgba(0,0,0,.2);
+	display: block;
+	color: rgb(255,255,255);
+}
+
+.dropdown ul a:hover {
+	background: rgb(4,222,204);
+}
+
+#row-6 > div.container {
+	padding-top: 16.4%;
+	padding-bottom: 16.4%;
+}
+
+#row-6 > div > h3 {
+	font-size: 4.2rem;
+	font-weight: 400;
+	margin: 0 0 7% 0;
+	text-transform: capitalize;
+}
+
+#row-6 > div > p {
+	font-size: 1.5rem;
+	line-height: 2;
+	margin: 0 0 7%;
+}
+
+a.button {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	padding: 15px;
+	background: rgb(4,222,204);
+	border: 1px solid transparent;
+	display: inline-block;
+	color: rgb(255,255,255);
+}
+
+a.button:hover {
+	border: 1px solid rgb(255,255,255);	
+	background: none;
+}
+
+
+/* Row-1
+--------------------------------------------------------------------------------*/
+
+#row-1 article {
+	display: inline-block;
+	width: 31.2%;
+}
+
+#row-1 article + article {
+	margin: 0 0 0 2.7%;
+}
+
+.hoverLinkContainer img {
+	max-width: 100%;
+	display: block;
+}
+
+#row-1 .hoverLinkContainer img {
+	margin: 0 0 9.8%;
+}
+
+.hoverLink .fas {
+	color: rgb(255,255,255);
+	font-size: 2.8rem;
+}
+
+#row-1 article h3 {
+	font-weight: 400;
+	font-size: 1.96rem;
+	margin: 0 0 8.1%;
+}
+
+#row-1 article p {
+	font-size: 1.4rem;
+	color: rgb(122,122,122);
+	line-height: 1.5;
+	margin: 0 0 7%;
+}
+
+#row-1 article > a {
+	color: rgb(4,222,224);
+	font-size: 1.4rem;
+	display: inline-block;
+}
+
+#row-1 article > a .fas {
+	font-size: 1rem;
+}
+
+#row-1 article > a:hover {
+	width: 100%;
+	position: relative;
+}
+
+#row-1 article > a:hover .fas {
+	position: absolute;
+	animation: 0.5s linear both disappear;
+}
+
+
+/* Row-2
+--------------------------------------------------------------------------------*/
+
+#row-2 {
+	background: url("../img/back/02.png");	
+	text-align: center;
+}
+
+#row-2 > div {
+	position: relative;
+}
+
+#row-2 h3 {
+	font-size: 1.96rem;
+	font-weight: 400;
+	line-height: 1.2;
+	color: rgb(255,255,255);
+	margin: 0 0 8.1%;
+}
+
+#row-2 h3 > span {
+	display: block;
+	font: 400 1.4rem Verdana, Geneva, sans-serif;
+	text-transform: none;
+}
+
+.articles {
+	text-align: left;
+	margin: 0 0 3%;
+}
+
+.articles > li > ul > li {
+	width: calc((100% - 8px - 2.5%*2)/3);
+}
+
+.articles > li > ul > li + li {
+	margin: 0 0 0 2.5%;
+}
+
+.articles article {
+	position: relative;
+	padding: 0 0 0 22%;
+}
+
+.articles .fab {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: rgb(255,255,255);
+	font-size: 3.6rem;
+}
+
+.articles h3 {
+	color: rgb(255,255,255);
+	font-size: 1.96rem;
+	line-height: 1.18;
+	font-weight: 400;
+	margin: 0 0 10%;
+}
+
+.articles p {
+	color: rgb(255,255,255);
+	font-size: 1.4rem;
+	line-height: 1.6;
+	margin: 0 0 8%;
+}
+
+.articles a, .articles a > .fas {
+	color: rgb(255,255,255);
+	font-size: 1.4rem;
+}
+
+.articles article:hover > .fab, #row-2 .articles article:hover > h3, 
+.articles article:hover > a, .articles article:hover > a > .fas {
+	color: rgb(4,222,224);
+}
+
+.articles a {
+	display: inline-block;
+	margin: 0 0 20.7%;
+}
+
+.articles a:hover {
+	width: 100%;
+	position: relative;1
+}
+
+.articles a:hover .fas {
+	animation: 0.5s linear both disappear;
+	position: absolute;	
+}
+
+
+/* Row-3
+--------------------------------------------------------------------------------*/
+
+#row-3 {
+	text-align: center;
+}
+
+#row-3 h3 {
+	font-size: 1.96rem;
+	font-weight: 400;
+	line-height: 1.18;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+#row-3 h3 > span {
+	display: block;
+	font-size: 1.4rem;
+}
+
+#row-3 article {
+	width: calc(100% - 4px * 2 - 2.5% * 2);
+}
+
+#row-3 article + article {
+	margin: 0 0 0 2.5%;
+}
+
+#row-3 ul {
+	margin: 8.1% 0;
+}
+
+#row-3 a:hover {
+	color: rgb(122,122,122);
+	border: 1px solid rgb(122,122,122);
+}
+
+
+/* Row-4
+--------------------------------------------------------------------------------*/
+#row-4 {
+ 	background: url("../img/back/03.png");
+ 	text-align: center;
+}
+
+#row-4 h3 {
+ 	color: rgb(255,255,255);
+ 	text-transform: capitalize;
+ 	font-size: 1.96rem;
+ 	font-weight: 400;
+ 	margin: 0 0 8.1%;
+}
+
+#row-4 h3 span {
+ 	display: block;
+ 	font-size: 1.4rem;
+ 	font-weight: normal;
+ 	line-height: 1.4;
+}
+
+#row-4 ul {
+	margin: 0 0 8.1%;
+}
+
+#row-4 ul::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#row-4 ul li {
+ 	width: calc((100% - 3%) / 2);
+ 	text-align: center;
+}
+
+#row-4 ul li + li {
+ 	margin: 0 0 0 3%;
+}
+
+#row-4 article blockquote {
+	background: rgb(255,255,255);
+	font-size: 1.4rem;
+	padding: 20px;
+	text-align: left;
+	color: rgb(71,71,71);
+	line-height: 1.4;
+}
+
+#row-4 article blockquote + .fas {
+	color: rgb(255,255,255);
+	font-size: 5rem;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+#row-4 article h4 {
+	color: rgb(255,255,255);
+	font-size: 1.68rem;
+	font-weight: 700;
+	margin: 10px 0 0;
+	line-height: 1.2;
+}
+
+#row-4 article h4 > em {
+	font-size: 1.12rem;
+	font-weight: normal;
+	display: block;
+}
+
+/* Row-5
+-----------------------------------------------------------------------------*/
+
+#row-5 {
+	text-align: center;
+}
+
+#row-5 h3 {
+	font-size: 1.96rem;
+	font-weight: 400;
+	line-height: 1.18;
+	text-transform: capitalize;
+	text-align: center;
+	color: rgb(122,122,122);
+}
+
+#row-5 h3 > span {
+	display: block;
+	font-size: 1.4rem;
+}
+
+#row-5 > div > ul > li {
+	width: calc((100% - 4px * 2 - 2.5% * 2)/3);
+	vertical-align: top;
+}
+
+#row-5 ul:not(.navigation) > li + li {
+	margin: 0 0 0 2.5%;
+}
+
+#row-5 ul:not(.navigation) {
+	margin: 8.1% 0;
+}
+
+#row-5 .hoverLinkContainer {
+	margin: 0 0 11.3%;
+}
+
+.navigation {
+	text-align: left;
+}
+
+.navigation a {
+	color: rgb(4,222,224);
+	font-size: 1.12rem;
+	line-height: 2;
+}
+
+.navigation .fas {
+	color: rgb(122,122,122);
+	font-size: 1.12rem;
+	margin: 0 4px 0;
+}
+
+.navigation > li + li::before {
+	content: "|";
+	margin: 0 5px 0 0;
+	color: rgb(0,0,0);
+}
+
+#row-5 article {
+	text-align: left;
+}
+
+#row-5 article h3 {
+	color: rgb(122,122,122);
+	font-size: 1.96rem;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 6.5%;
+	text-align: left;
+}
+
+#row-5 article p {
+	color: rgb(122,122,122);
+	line-height: 1.6;
+	font-size: 1.4rem;
+	margin: 0 0 6.5%;
+}
+
+#row-5 article a {
+	color: rgb(4,222,224);
+	font-size: 1.4rem;
+}
+
+#row-5 a.button:hover {
+	color: rgb(122,122,122);
+	border: 1px solid rgb(122,122,122);
+}
+
+
+/* Input form
+-----------------------------------------------------------------------------*/
+
+#inputForm {
+	background: url(../img/back/04.png);
+}
+
+
+#inputForm h3 {
+ 	color: rgb(255,255,255);
+ 	text-transform: capitalize;
+ 	font-size: 1.96rem;
+ 	font-weight: 400;
+ 	text-align: center;
+}
+
+#inputForm h3 span {
+ 	display: block;
+ 	font-size: 1.4rem;
+ 	font-weight: 400;
+ 	line-height: 1.4;
+ 	text-transform: none;
+ }
+
+ #inputFormContainer {
+ 	max-width: 79.5%;
+ 	margin: 0 auto;
+ 	padding: 8.1% 0 0;
+ 	text-align: center;
+ }
+
+#inputFormContainer:hover input {
+	border-color: rgb(255,255,255);
+}
+
+ #inputFormContainer input {
+ 	width: 100%;
+ 	background: transparent;
+ 	color: rgb(255,255,255);
+ 	border: 1px solid rgb(122,122,122);
+ 	padding: 8px;
+ 	font-size: 1.4rem;
+ 	line-height: 1.25;
+ 	margin: 0 0 15px;
+ }
+
+#inputFormContainer input:focus {
+	border-color: rgb(4,222,224);
+}
+
+ #inputFormContainer input::-webkit-input-placeholder {
+ 	color: rgb(255,255,255);
+ 	opacity: 1;
+ }
+
+ #inputFormContainer input::-moz-placeholder {
+ 	color: rgb(255,255,255);
+ 	opacity: 1
+ }
+
+  #inputFormContainer input::-ms-input-placeholder {
+ 	color: rgb(255,255,255);
+ 	opacity: 1
+ }
+
+ #inputFormContainer input::-moz-placeholder {
+ 	color: rgb(255,255,255);
+ 	opacity: 1
+ }
+
+ #inputFormContainer button {
+ 	text-transform: uppercase;
+ 	color: rgb(255,255,255);
+ 	background: rgb(4,222,224);
+ 	padding: 10px 18px;
+ 	border: none;
+ 	font-size: 1.4rem;
+ 	font-weight: 700;
+ 	text-align: center;
+ }
+
+
+/* Row-7
+-----------------------------------------------------------------------------*/
+
+#row-7 li.floatLeft {
+	width: calc((100% - 2.5% * 3)/4);
+}
+
+#row-7 li.floatLeft + li {
+	margin: 0 0 0 2.5%;
+}
+
+#row-7 article h4 {
+	color: rgb(18,18,18);
+	font-size: 1.68rem;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 22%;
+}
+
+#row-7 article p {
+	color: rgb(122,122,122);
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.6;
+	margin: 0 0 8.8%;
+}
+
+#row-7 article a {
+	color: rgb(4,222,224);
+	font-size: 1.4rem;
+	line-height: 1.6;
+}
+
+#contactInfo > li {
+	padding: 0 0 8.8% 17.5%;
+	position: relative;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	color: rgb(122,122,122);
+	font-size: 1.4rem;
+}
+
+#contactInfo > li:last-of-type {
+	border: none;
+}
+
+#contactInfo > li + li {
+	padding: 8.8% 0;
+}
+
+#contactInfo > li + li > span {
+	padding: 0 0 0 17.5%;
+	position: relative;
+	color: rgb(122,122,122);
+	font-size: 1.4rem;
+	line-height: 1.6;
+}
+
+#contactInfo .fas, #contactInfo .far {
+	font-size: 1.6rem;
+	position: absolute;
+	line-height: 1.2;
+	top: 0;
+	left: 0;
+}
+
+#row-7 .socialNetIcons a {
+	display: inline-block;
+	background: rgb(122,122,122);
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.socialNetIcons .fab {
+	display: inline-block;
+	color: rgb(255,255,255);
+}
+
+.socialNetIcons a:hover .fab {
+	color: rgb(4,222,224);
+}
+
+article .innerList li {
+	padding: 0 0 6.5%;
+	margin: 0 0 6.5%;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
