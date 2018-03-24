@@ -1,0 +1,143 @@
+@media (min-width: 400px) {
+	header .contacts_list li {
+		display: inline-block;
+	}
+
+	.contacts_list > li + li {
+		margin: 0 0 0 20px;
+	}
+	
+	.social_links_list a {
+		font-size: 1.4rem;
+	}
+}
+
+
+@media (min-width: 500px) {
+	.contacts_list {
+		margin: 0;
+	}
+
+	header .contacts_list > li {
+		float: left;
+	}	
+	
+	header > nav > div:first-of-type .float_left {
+		float: left;
+	}
+
+	header > nav > div:first-of-type .float_right {
+		float: right;
+	}
+
+	span.dropdown i.fa-bars, li.dropdown i.fa-caret-left {
+		display: none;
+		transition: font-size .3s ease-in-out;
+	}
+
+	li.dropdown i.fa-sort-down {
+		display: block;
+	}
+
+	span.dropdown, ul.nav_bar {
+		position: relative;
+		top: 0;
+		left: 0;
+		visibility: visible;
+		opacity: 1;
+		transition: font-size .3s ease-in-out;
+		background: none;
+	}
+
+	span.dropdown ul.nav_bar > li {
+		width: auto;
+		transition: font-size .3s ease-in-out;
+	}
+
+	ul.nav_bar > li + li {
+		margin: 0 0 0 10px;
+	}
+
+	span.dropdown:hover ul.nav_bar > li > a {
+		animation: none;
+	}
+
+	ul.nav_bar > li > a {
+		padding: 30px 0;
+		display: block;
+	}
+
+	ul.nav_bar > li > a:hover, li.dropdown:hover > i {
+		background: none;
+		color: rgb(4,222,224);
+	}
+
+	ul.nav_bar li.dropdown > ul {
+		top: auto;
+		right: auto;
+		width: 180px;
+	}
+
+	ul.nav_bar li.dropdown a {
+		padding-left: 15px;
+	}
+
+	.horizontal_list.three_columns > li {
+		width: calc((100% - 3% * 2) / 3);
+	}
+
+	.horizontal_list.three_columns > li:nth-of-type(2) {
+		margin: 0 0 30px 3%;
+	}
+
+	.section_4 .horizontal_list > li {
+	 	width: calc((100% - 3%) / 2);
+	}
+
+	.section_4 .horizontal_list > li + li {
+	 	margin: 0 0 0 3%;
+	}
+}
+
+@media (min-width: 600px) {
+	ul.nav_bar > li +li {
+		margin: 0 0 0 20px;
+	}	
+
+	ul.nav_bar li > a {
+		font-size: 1.4rem;
+	}
+}
+
+@media (min-width: 700px) {
+	header > div.container > h3 {
+		font-size: 4.8rem;
+	}
+
+	.horizontal_list.three_columns > li:nth-of-type(2) {
+		margin: 0 0 0 3%;
+	}
+
+	.horizontal_list.three_columns > li + li {
+		margin: 0 0 0 3%;
+	}
+
+	.articles .horizontal_list > li {
+		width: calc((100% - 2.5%*2)/3);
+		float: left;
+	}	
+
+	.articles .horizontal_list > li + li {
+		margin: 0 0 0 2.5%;
+	}
+
+	.four_columns > li {
+		width: calc((100% - 2.5% * 3)/4);
+		min-width: 150px;
+		float: left;
+	}
+
+	footer .horizontal_list > li + li {
+		margin: 0 0 0 2.5%;
+	}
+}
